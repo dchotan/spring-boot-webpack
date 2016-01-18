@@ -31,7 +31,10 @@ export default {
     new HtmlWebpackPlugin({
       hash: true,
       template: 'app/index.html',
-      inject: 'body'
+      inject: 'body',
+      minify: {
+        collapseWhitespace: true
+      }
     })
   ]
 }
