@@ -1,0 +1,8 @@
+= Spring Boot Webpack
+Patrick Grimard <pgrimard@gmail.com
+v0.0.1-SNAPSHOT, 2016-01-18
+:toc:
+:imagesdir: assets/images
+:homepage: http://patrickgrimard.com
+
+Sample application with Spring Boot backend and React front end.  Front end is bundled using Webpack.
