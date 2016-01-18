@@ -1,5 +1,6 @@
 import React from 'react';
 import {render} from 'react-dom';
+import rest from 'rest';
 
 import Item from './components/item';
 import ItemList from './components/itemlist';
@@ -8,8 +9,12 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      items: ['item 1', 'item 2', 'item 3']
+      items: []
     };
+  }
+
+  componentDidMount() {
+    rest('/items').then(items => this.setState({items: JSON.parse(items.entity)})).then(items => console.debug(items));
   }
 
   render() {
@@ -17,7 +22,7 @@ export default class App extends React.Component {
       <div>
         <h1>Spring Boot Webpack</h1>
         <ItemList>
-          {this.state.items.map((v, k) => <Item key={k} value={v}/>)}
+          {this.state.items.map((v, k) => <Item key={k} value={v.carrier + ' - ' + v.reason}/>)}
         </ItemList>
       </div>
     );
