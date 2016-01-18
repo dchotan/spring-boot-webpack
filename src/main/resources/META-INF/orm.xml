@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+                 version="2.0">
+    <persistence-unit-metadata>
+        <persistence-unit-defaults>
+            <schema>TEST</schema>
+        </persistence-unit-defaults>
+    </persistence-unit-metadata>
+
+    <entity class="com.patrickgrimard.wnt.auth.Person">
+        <table schema="AOSWEBV5R0" name="USERS1"/>
+    </entity>
+
+    <entity class="com.patrickgrimard.wnt.auth.ApplicationDefinition">
+        <table schema="AOSWEBV5R0" name="WTAPPDEF"/>
+    </entity>
+
+    <entity class="com.patrickgrimard.wnt.auth.GrantedApplication">
+        <table schema="AOSWEBV5R0" name="USERAPPL"/>
+    </entity>
+
+    <entity class="com.patrickgrimard.CarrierDoNotUse">
+        <table schema="PATRICK" name="CARRDNUPF"></table>
+    </entity>
+</entity-mappings>
