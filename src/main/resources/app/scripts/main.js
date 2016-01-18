@@ -2,8 +2,8 @@ import React from 'react';
 import {render} from 'react-dom';
 import rest from 'rest';
 
-import Item from './components/item';
-import ItemList from './components/itemlist';
+import Item from 'components/item';
+import ItemList from 'components/itemlist';
 
 export default class App extends React.Component {
   constructor(props) {
