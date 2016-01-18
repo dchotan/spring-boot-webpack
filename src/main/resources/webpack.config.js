@@ -1,7 +1,6 @@
 var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-var CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = {
   entry: './app/scripts/main.js',
@@ -18,9 +17,8 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin('[name].css'),
-    new CompressionPlugin(),
     new HtmlWebpackPlugin({
-      hash: false,
+      hash: true,
       template: 'app/index.html',
       inject: 'body'
     })
