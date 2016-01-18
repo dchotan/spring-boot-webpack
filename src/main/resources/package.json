@@ -5,6 +5,7 @@
   "main": "app/scripts/main.js",
   "private": true,
   "scripts": {
+    "start": "webpack --watch",
     "build": "webpack",
     "prod": "webpack -p"
   },
