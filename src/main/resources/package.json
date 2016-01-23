@@ -1,6 +1,6 @@
 {
   "name": "spring-boot-webpack",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "app/scripts/main.js",
   "private": true,
