@@ -1,16 +1,12 @@
 import path from 'path';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import CleanWebpackPlugin from 'clean-webpack-plugin';
-
-let buildDir = 'public';
 
 export default {
   entry: './app/scripts/main.js',
   output: {
-    path: path.join(__dirname, buildDir),
-    filename: '[name].js',
-    chunkFilename: '[id].js'
+    path: path.join(__dirname, 'public'),
+    filename: '[name].js'
   },
   resolve: {
     extensions: ['', '.js', '.css'],
@@ -26,7 +22,6 @@ export default {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin([buildDir], {verbose: false}),
     new ExtractTextPlugin('[name].css'),
     new HtmlWebpackPlugin({
       hash: true,
