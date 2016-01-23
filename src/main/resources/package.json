@@ -5,9 +5,11 @@
   "main": "app/scripts/main.js",
   "private": true,
   "scripts": {
-    "start": "webpack --watch",
-    "build": "webpack",
-    "prod": "webpack -p"
+    "clean": "rimraf ./public && mkdir public",
+    "prebuild": "npm run clean",
+    "build": "webpack -p",
+    "prewatch": "npm run clean",
+    "watch": "webpack -d --watch"
   },
   "author": "",
   "license": "MIT",
@@ -22,6 +24,7 @@
     "extract-text-webpack-plugin": "^1.0.1",
     "html-webpack-plugin": "^2.6.2",
     "node-sass": "^3.4.2",
+    "rimraf": "^2.5.1",
     "sass-loader": "^3.1.2",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.11"
