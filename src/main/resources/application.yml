@@ -1,4 +1,7 @@
 server:
+  port: 3000
   compression:
     enabled: true
     mime-types: text/html,text/xml,text/plain,text/css,application/javascript
+
+message: Hello Spring Boot!
