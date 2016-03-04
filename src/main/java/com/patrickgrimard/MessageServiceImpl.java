@@ -1,8 +1,10 @@
 package com.patrickgrimard;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
+
+import javax.inject.Inject;
 
 /**
  * Created on 2016-03-01
@@ -13,10 +15,14 @@ import org.springframework.stereotype.Service;
 @RefreshScope
 public class MessageServiceImpl implements MessageService {
 
-    @Value("${message}")
-    private String message;
+    private Environment env;
+
+    @Inject
+    public MessageServiceImpl(Environment env) {
+        this.env = env;
+    }
 
     public String getMessage() {
-        return message;
+        return env.getProperty("message");
     }
 }
