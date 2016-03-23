@@ -6,3 +6,25 @@ v0.0.1-SNAPSHOT, 2016-01-18
 :homepage: http://patrickgrimard.com
 
 Sample application with Spring Boot backend and React front end.  Front end is bundled using Webpack.
+
+== Running with Docker
+Start by building the app.
+
+[source,bash]
+----
+./mvnw clean install
+----
+
+Next build the Docker image.
+
+[source,bash]
+----
+cd target && docker build -t my-image .
+----
+
+Finally run the app.
+
+[source,bash]
+----
+docker run -d -p 3000:3000 --name my-app my-image
+----
