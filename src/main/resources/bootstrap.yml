@@ -1,7 +1,7 @@
 spring:
   application:
     name: spring-boot-webpack
-  cloud:
-    config:
-      discovery:
-        enabled: true
+#  cloud:
+#    config:
+#      discovery:
+#        enabled: true
