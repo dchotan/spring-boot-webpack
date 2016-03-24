@@ -7,7 +7,7 @@ package com.patrickgrimard
  *
  * @author Patrick
  */
-open class KotlinMessageService : MessageService {
+open class MessageServiceImpl : MessageService {
     override fun getMessage(): String {
         return "Hello Kotlin!!"
     }

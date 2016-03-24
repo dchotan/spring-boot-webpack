@@ -16,7 +16,7 @@ open class Application {
 
     @Bean
     open fun messageService() : MessageService {
-        return KotlinMessageService()
+        return MessageServiceImpl()
     }
 }
 
