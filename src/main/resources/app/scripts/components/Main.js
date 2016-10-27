@@ -6,7 +6,7 @@ import MessageList from 'components/message/MessageList';
 import 'styles/main.scss';
 
 const propTypes = {
-  fetchItems: PropTypes.func
+  fetchMessages: PropTypes.func
 };
 
 class Main extends Component {

@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import 'styles/components/message.scss';
 
 const propTypes = {
-  items: PropTypes.array
+  messages: PropTypes.array
 };
 
 function MessageList({messages}) {
