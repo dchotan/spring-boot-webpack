@@ -1,10 +1,10 @@
 import path from 'path';
+import webpack from 'webpack';
 import autoprefixer from 'autoprefixer';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 export default {
-  devtool: 'cheap-module-eval-source-map',
   entry: {
     main: './app/scripts/index.js'
   },
@@ -31,6 +31,14 @@ export default {
   },
   postcss: [ autoprefixer({ browsers: ['last 5 versions'] }) ],
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {warnings: false}
+    }),
     new ExtractTextPlugin('[name].css'),
     new HtmlWebpackPlugin({
       hash: true,
@@ -38,7 +46,7 @@ export default {
       filename: 'index.html',
       inject: 'body',
       minify: {
-        collapseWhitespace: false
+        collapseWhitespace: true
       }
     })
   ]
