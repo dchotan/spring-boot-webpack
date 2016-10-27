@@ -8,5 +8,5 @@ package com.patrickgrimard
  * @author Patrick
  */
 interface MessageService {
-    fun getMessage(): String
+    fun getMessages(): Array<Message>
 }
